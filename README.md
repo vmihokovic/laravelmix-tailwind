@@ -3,9 +3,9 @@
 
 ## Laravel Mix
 
-Begin by installing Laravel Mix through NPM, and then copying the example Mix file to your project root. Make sure to change `<app_name>` to the actual name of your project.
+Begin by installing Laravel Mix through NPM, and then copying the example Mix file to your project root. Make sure to change `my-project` to the actual name of your project.
 
-    mkdir <app_name> && cd <app_name>
+    mkdir my-project && cd my-project
     npm init -y
     npm install laravel-mix --save-dev
     cp node_modules/laravel-mix/setup/webpack.mix.js ./
