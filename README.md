@@ -1,4 +1,4 @@
-# Laravel Mix + Tailwind CSS + PurgeCSS
+# Use Tailwind with Laravel Mix
 
 
 ## Laravel Mix
