@@ -39,6 +39,10 @@ Create the Tailwind config file:
 
     ./node_modules/.bin/tailwind init
 
+If the above command will not work because running scripts is disabled on your Windows system, run the following command in PowerShell (as Administrator):
+
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+
 In the `src/sass` folder, create a new file named `_tailwind.scss`
 Put this code inside the newly created file:
 
