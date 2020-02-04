@@ -25,17 +25,6 @@ Head over to your `webpack.mix.js` file and replace the contents with the follow
 
 Take note of the source paths and create the necessary `app.js` and `app.scss` files.
 
-Add the following NPM scripts to your `package.json` file to speed up your workflow.
-
-    "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
-    }
-
 ## Tailwind CSS & PurgeCSS
 
 Install Tailwind CSS via npm:
@@ -84,6 +73,17 @@ Open the `webpack.mix.js` file and replace the contents with the following code:
             ],
             extensions: ['htm', 'html', 'js', 'php', 'vue'],
         });
+
+Add the following NPM scripts to your `package.json` file to speed up your workflow.
+
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    }
 
 Lastly, to handle different environments, these scripts make use of `cross-env`:
 
