@@ -59,25 +59,25 @@ Open the `webpack.mix.js` file and replace the contents with the following code:
     let mix = require('laravel-mix');
     let tailwindcss = require('tailwindcss');
     require('laravel-mix-purgecss');
-    
+
     mix.js('src/js/app.js', 'dist/js')
        .sass('src/sass/app.scss', 'dist/css')
        .options({
             processCssUrls: false,
             postCss: [ tailwindcss('./tailwind.config.js') ],
-        })
-        .purgeCss({
-            enabled: true,
-            content: [
-                './dist/**/*.htm',
-                './dist/**/*.html',
-                './dist/**/*.js',
-                './dist/**/*.jsx',
-                './dist/**/*.php',
-                './dist/**/*.vue',
-            ],
-            extensions: ['htm', 'html', 'js', 'php', 'vue'],
-        });
+       })
+       .purgeCss({
+           enabled: true,
+           content: [
+               './dist/**/*.htm',
+               './dist/**/*.html',
+               './dist/**/*.js',
+               './dist/**/*.jsx',
+               './dist/**/*.php',
+               './dist/**/*.vue',
+           ],
+           extensions: ['htm', 'html', 'js', 'php', 'vue'],
+       });
 
 Add the following NPM scripts to your `package.json` file to speed up your workflow.
 
