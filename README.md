@@ -30,6 +30,7 @@ Take note of the source paths and create the necessary `app.js` and `app.scss` f
 Install Tailwind CSS via npm:
 
     npm install tailwindcss --save-dev
+    npm install @tailwindcss/ui
 
 Install PurgeCSS via npm:
 
@@ -43,12 +44,22 @@ If the above command will not work because running scripts is disabled on your W
 
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
+Optional: Add @tailwindcss/ui to your Tailwind plugin list:
+
+    // tailwind.config.js
+    module.exports = {
+      plugins: [
+        require('@tailwindcss/ui'),
+      ]
+    }
+
 In the `src/sass` folder, create a new file named `_tailwind.scss`
 Put this code inside the newly created file:
 
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
+    @tailwind screens;
 
 Open `app.scss` and import the previously created `_tailwind.scss`:
 
